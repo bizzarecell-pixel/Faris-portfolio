@@ -1,0 +1,187 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIABLES (FAANG STYLE) */
+:root {
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --text: #1c1e21;
+  --primary: #0a66c2;
+  --secondary: #004182;
+}
+
+body.dark {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #e5e7eb;
+  --primary: #38bdf8;
+  --secondary: #0ea5e9;
+}
+
+/* GLOBAL */
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background 0.4s, color 0.4s;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+}
+
+header h1 {
+  font-size: 3rem;
+}
+
+header p {
+  opacity: 0.9;
+  margin-top: 10px;
+}
+
+/* DARK MODE BUTTON */
+#darkToggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255,255,255,0.2);
+  border: none;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  color: white;
+}
+
+/* SECTIONS */
+section {
+  background: var(--card);
+  margin: 50px auto;
+  padding: 45px;
+  max-width: 1100px;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-6px);
+}
+
+/* HEADINGS */
+h2 {
+  color: var(--primary);
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+/* SKILLS */
+.skills ul {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.skills li {
+  padding: 12px 22px;
+  background: rgba(10,102,194,0.1);
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.skills li:hover {
+  background: var(--primary);
+  color: white;
+  transform: scale(1.08);
+}
+
+/* PROJECTS */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: var(--card);
+  border: 1px solid rgba(0,0,0,0.05);
+  padding: 30px;
+  border-radius: 18px;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+.project-card h3 {
+  color: var(--primary);
+}
+
+.project-links {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.project-links a {
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 25px;
+  background: var(--primary);
+  color: white;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.project-links a:hover {
+  background: var(--secondary);
+  transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: 70px;
+}
+
+/* SCROLL ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s ease;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.3rem;
+  }
+
+  section {
+    padding: 30px 20px;
+  }
+}
